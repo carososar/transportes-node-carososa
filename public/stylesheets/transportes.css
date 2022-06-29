@@ -1,0 +1,424 @@
+/*font-family: 'Open Sans', sans-serif;*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    /*base*/
+    line-height: 20px;
+}
+
+header {
+    background-color: #2e64a1;
+    /*color del cabezal, #, rgb, rgba*/
+    padding: 16px 0;
+    /*tambien puedo poner 1 rem o 1 em, el 0 significa que a los costados derecha e izq no dejo espacio, en cambio el 16px sign que arriba y abajo dejo un espacio*/
+}
+
+header h1 {
+    color: white;
+    /*color de la tipografia*/
+    font-size: 40px;
+    font-weight: 100;
+    /*es el peso de la fuente*/
+    font-style: italic;
+    /*es el estilo de la fuente*/
+    display: inline-block;
+    position: relative;
+    /*para que suba la palabra transporte*/
+    bottom: 35px;
+    margin-left: 10px;
+}
+
+nav {
+    background-color: #6da9ed;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: stretch;
+    /*width: 100%;*/
+}
+
+nav ul li {
+    /*display: block;*/
+    flex-grow: 1;
+    /*La propiedad flex-grow de CSS especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex),
+    en su dirección principal.*/
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #ccc;
+    clear: both;
+    /*es para que se ubique el pie al final de todo*/
+    color: #333;
+    text-align: center;
+    padding: 5px 0;
+    /*3 rem 0 siempre rem hace referencia al body*/
+    margin-top: 20px;
+}
+
+nav ul li a.activo {
+    background-color: #4c76a5;
+}
+#menuToggle{
+    display: none;
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #2e64a1;
+    font-weight: 400;
+}
+
+/*Inicio Home*/
+
+.homeimg img{
+    max-width: 100%; /*le doy un maximo ancho para acomodarlo a las distintas medidas*/
+}
+
+.bienvenidos {
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.bienvenidos p {
+    font-size: 20px;
+}
+
+.testimonios {
+    width: 25%;
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonio {
+    background-color: #ccc;
+    padding: 16px;
+}
+
+.testimonio .cita {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+}
+
+.testimonio .autor {
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    margin: 16px 0;
+}
+
+/*fin home*/
+
+/*inicio nosotros*/
+.historia p {
+    font-size: 0.8rem;
+    /*o se puede poner 12 px*/
+}
+
+.personas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.persona img {
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.persona h5,
+.persona h6 {
+    margin: 0;
+    font-weight: normal;
+    color: #2e64a1;
+}
+
+.persona h5 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.persona h6 {
+    font-size: 11px;
+    font-style: italic;
+}
+
+.persona p {
+    color: #666;
+    font-size: 10px;
+}
+
+
+/*fin nosotros*/
+
+/*Inicio Servicios*/
+
+.servicio {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    /*box-sizing: border-box;*/
+    display: flex;
+    gap: 32px;
+    /*sirve como calle*/
+}
+
+.servicio .info h4 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 50px;
+}
+
+.servicio .info p {
+    font-size: 13px;                  
+    /*line-height: 19px;*/
+}
+
+.servicio img {
+    border-radius: 13px;
+    display: block;
+    max-width: 225px;
+}
+
+.servicio:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/*.servicio:nth-child(odd){
+    flex-direction: row;*/
+
+/*Fin Servicios*/
+
+/*Inicio Galeria*/
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.galeria img {
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 18%;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+.galeria img:nth-child(3) {
+    background-color: aqua;
+    border-color: aqua;
+}
+
+/*Fin Galeria*/
+
+/*Inicio contacto*/
+.contacto{
+    display: flex;
+    gap: 24px;
+}
+
+.contacto div{
+    width: 100%;
+    /*background-color: yellow;*/
+}
+.datos p{
+    font-size: 14px;
+}
+.datos ul li{
+    font-size: 13px;
+}
+.formulario p{
+    display: flex;
+}
+.formulario p label{
+    min-width: 80px;
+    background-color: yellow;
+    display: flex;/*para que quede el texto en el medio, ese texto es un label*/
+    align-items: center; /*aca le digo que vaya en el medio*/
+}
+.formulario p input,
+.formulario p textarea{
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 14px;
+    padding: 6px 10px; /*es para que crezca el tamanio del espacio que hay para escribir en el formulario*/
+}
+
+.formulario p textarea{
+    height: 150px;
+    resize: none; /*resize es para que el espacio que hay para escribir el mensaje no se pueda agrandar ni achicar que quede del tamanio que le puse, o sea 150px*/
+}
+.formulario p:nth-child(4){ /*esto es para que la palabra mensaje se acomode arriba y no en el centro*/
+    align-items: flex-start;
+}
+.formulario input[type="submit"]{
+    background-color: #6da9ed;
+    box-shadow: 0 0.10px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 16px;
+    padding: 6px 20px;
+    width: auto;
+    position: relative;
+    left: 80px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover{
+    background-color: #2e64a1;
+}
+
+/*Fin de Contacto*/
+
+/*responsive*/ /* le voy a cambiar los estilos con @media a los distintos elementos para que se vayan acomodando a la medida de 550px*/
+@media screen and (max-width:550px) {
+    header .holder{
+        display: flex; /*le indico que los elementos se pongan uno al lado del otro*/
+        align-items: center;
+        justify-content: center;
+    }
+    header h1{
+        position: static; /*le doy la contra orden ya que tenia position relativa por lo tanto la contra orden es static que es la que viene por defecto, para que el h1 (titulo) se acomode*/
+    }
+    header img{
+        max-width: 80px; /*para achicar la imagen lo puse en px x que la imagen tiene en el html un witd:"100" por eso lo tengo que poner en px sino no me lo toma*/
+    }
+
+    nav{
+        overflow-x: scroll; /*provisorio*//*desbordamiento*/
+        background-color: green;
+    }
+    .columnas{
+        flex-direction: column;
+    }
+    .bienvenidos,
+    .testimonios{
+        width: 100%;
+    }  
+
+    .holder{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    /*nosotros*/
+    .personas{
+        flex-wrap: wrap;
+        gap: 16px; /*empuja a los elementos*/
+    }
+    .persona{
+        width: 47%; /*le indico que sobre el 100% del ancho me tome el 47% para cada uno.*/
+    }
+    .persona{
+        text-align: left;
+    }
+
+/*fin de nosotros*/
+
+/*inicio servicios*/
+
+
+    .servicio,
+    .servicio:nth-child(even){
+        flex-direction: column;
+    }
+    .servicio img{
+        width: 100%;
+        max-width: 100%;
+    }
+    .servicio{
+        gap: 0;
+    }
+
+
+/*fin de servicios*/
+
+
+
+/*inicio galeria*/
+    .galeria{
+        gap: 20px;
+    }
+    .galeria img {
+            width: 47%;
+            margin: 0;
+    }
+/*fin galeria*/
+/*inicio contacto*/
+    .contacto{
+    flex-direction: column;/*le indico que vaya uno debajo del otro*/ /*antes estaban uno al lado del otro*/
+}
+/*fin contacto*/
+
+/*nav*/
+nav ul.holder{
+    flex-direction: column; 
+    /*contra oreden a los elementos los vamos a ajustar*/
+    padding-left: 0;
+    padding-right: 0;
+    max-height: 0;/*esto lo puse para cuando se abre el menu*/ /*es necesario para activar el menu y que se muestren los elementos que tiene adentro*/
+    transition: all 1s ease-in-out; /*se la puse para que el menu no abra tan tosco que sea un poco mas suave la apertura*/
+}
+nav.abierto ul.holder{ /*abierto es un modo de js para que me muestre el menu todo abierto cuando le hago click*/
+    max-height: 100vh; /*la medida vh viewport es una unidad*/
+}
+#menuToggle{
+    background-color: #2e64a1;
+    color: white;
+    text-decoration: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0 15px 8px;
+    position: relative; /*con esta posision puedo ir moviendo con top, left, rigth, botton.*/
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    
+}
+
+}
+/*fin responsive*/
+
+
