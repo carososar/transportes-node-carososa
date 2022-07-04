@@ -5,6 +5,6 @@ var router = express.Router();
 router.get('/', function(req,res,next){
     res.render('servicios', {
         isServicios: true
-    }) //view/nosotros.hbs
+    }) //view/servicios.hbs
 })
 module.exports = router;

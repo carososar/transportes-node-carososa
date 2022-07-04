@@ -3,8 +3,11 @@ var router = express.Router();
 
 
 router.get('/', function(req,res,next){
-    res.render('galeria',{
-        isGaleria: true
-    }) //view/galeria.hbs
+    res.render('admin/login',{
+        layout:'admin/layout'
+//admin/layout.hbs    });
+
+})//wiew/admin/login.hbs
 })
+
 module.exports = router;

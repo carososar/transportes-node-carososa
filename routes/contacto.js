@@ -6,7 +6,7 @@ var nodemailer = require('nodemailer');
 router.get('/', function(req,res,next){
     res.render('contacto',{
         isContacto: true
-    }) //view/nosotros.hbs
+    }) //view/contacto.hbs
 })
 
 router.post('/', async function(req,res,next){
