@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret:'fsfhhfdshfiuhrfhbfvjdjfh15824', //esta contrania no es necesario recordarlo es simplemente una seguridad de login. se guarda en la memoria del servidor
 
-  //cookie:{maxAge:nuell}, //esto se usa para el tiempo que dura una sesion.
+  cookie:{MaxAge:null}, 
   resave:false,
   saveUninitialized:true
 }))
