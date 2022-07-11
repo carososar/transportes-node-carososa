@@ -12,5 +12,12 @@ router.get('/', async function(req,res,netx){
         novedades
     }); //view/admin/novedades.hbs
 })
+//=> o function
+//esto sirve para mostar form el alta de las novedades
+router.get('/agregar',(req,res,next) =>{
+    res.render('admin/agregar',{ //agregar.hbs
+        layout: 'admin/layout'
+    })
+})
 
 module.exports = router;
